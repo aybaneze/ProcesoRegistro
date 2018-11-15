@@ -22,7 +22,7 @@
         <img class="imgProfile" src="https://scontent.flim6-2.fna.fbcdn.net/v/t1.0-9/42804543_2272523912761037_5092561113917161472_n.jpg?_nc_cat=111&_nc_eui2=AeGrUfSpLD6dnJKS52XXOJLOxMyTgpdi-VRVCQaH8e28aYu6iKlTZoeNb4mW-ZuT3UXPtlC_ST7qScZVHmlP_wzrJqQaXBlbDTdj1w7tw69hvw&_nc_ht=scontent.flim6-2.fna&oh=ed3cbf2c77b177de59d3618f909c0962&oe=5C77AE29">
         <p>Andrea Ybañez</p>
     <ul>
-            <a href="#"><li>Tabla de Registros</li></a>
+            <a><li>Tabla de Registros</li></a>
             <a href="#"><li>Informació de Inscritos</li></a>
             <a href="#"><li>Estadisticas</li></a>
             <a href="#"><li>Cerrar Sesión</li></a>    
@@ -48,12 +48,32 @@
     <td>{{employee.Apellidos}}</td>
     <td>{{employee.email}}</td>
     <td><img src="{{employee.foto}}"></td>
-    <td><mat-icon class="example-icon">edit</mat-icon></td>
-    <td><mat-icon class="example-icon">delete</mat-icon></td>
-    
+    <td><a (click) ="editEmployee(i)"><mat-icon class="example-icon">edit</mat-icon></a></td>
+    <td><a (click) ="deleteEmployee(i)"><mat-icon class="example-icon">delete</mat-icon></a></td>  
 </tr>
 </tbody>
-<button mat-raised-button (click)="addEmployee()">Agregar Miembro</button>
+<tr>
+    <td><input
+        name="nombre"
+        [(ngModel)]="model.nombre" 
+        placeholder="Nombres" 
+        required></td>
+    <td><input
+         name="Apellidos" 
+         [(ngModel)]="model.Apellidos"
+         placeholder="Apellidos" required></td>
+    <td><input
+         name="email"
+         [(ngModel)]="model.email"  
+         placeholder="Email" required></td>
+    <td><input
+        name="foto"
+        [(ngModel)]="model.foto"  
+        placeholder="Ingrese URL de foto" required></td>
+    <td *ngIf="btn"><button mat-raised-button color="accent"  (click)="updateEmployee()">{{btn}}</button></td>
+    <td><button mat-raised-button (click)="addEmployee()">Agregar</button></td>
+</tr>
+
 </table>
 
 </section>

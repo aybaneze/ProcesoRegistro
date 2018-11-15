@@ -1,0 +1,44 @@
+
+  form{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.example-container{
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  width: 30%;
+  -webkit-box-shadow: 4px 6px 21px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 6px 21px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 6px 21px 0px rgba(0,0,0,0.75);
+}
+
+mat-form-field{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+button{
+  background: rgb(95, 95, 95);
+  color: white;
+  width: 30%;
+}
+
+@media only screen and (max-width: 900px) {
+    .example-container{
+        background: rgb(255, 255, 255);
+        padding: 30px;
+        width: 80%;
+        -webkit-box-shadow: 4px 6px 21px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 6px 21px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 6px 21px 0px rgba(0,0,0,0.75);
+      }
+      
+
+}

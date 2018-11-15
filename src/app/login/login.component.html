@@ -1,0 +1,28 @@
+<form>
+    <div class="example-container">
+      <h1>IDS latam</h1>
+      <mat-form-field>
+        <input matInput  
+        name="email"
+        [(ngModel)]="model.email"
+        placeholder="Correo Electronico" 
+        required>
+        <mat-icon matSuffix class="material-icons"> alternate_email </mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+          <input matInput
+          name="pass"
+          [(ngModel)]="model.pass" 
+          placeholder="Contraseña" 
+          [type]=" hide ? 'text' : 'password' ">
+          <mat-icon matSuffix (click)=" hide= !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button (click)="Signin()">Iniciar Sesión</button>
+    </div>
+  </form>
+  
+  
+  
+  
