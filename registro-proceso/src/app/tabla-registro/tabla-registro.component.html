@@ -1,0 +1,61 @@
+<mat-toolbar >
+    <mat-toolbar-row>
+        <span>IDS Latam</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" mat-button [matMenuTriggerFor]="menu">reorder</mat-icon>
+        <mat-icon class="example-icon" mat-button [matMenuTriggerFor]="notifications">notifications</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Mi perfil</button>
+  <button mat-menu-item>Cerrar Sesión</button>
+</mat-menu>
+<mat-menu #notifications="matMenu">
+    <button mat-menu-item>Tiene un mensaje nuevo</button>
+    <button mat-menu-item>Alarma tiene una reunión</button>
+</mat-menu>
+
+<div class="container">
+    <div class="profile">
+        <p>Bienvenida</p>
+        <img class="imgProfile" src="https://scontent.flim6-2.fna.fbcdn.net/v/t1.0-9/42804543_2272523912761037_5092561113917161472_n.jpg?_nc_cat=111&_nc_eui2=AeGrUfSpLD6dnJKS52XXOJLOxMyTgpdi-VRVCQaH8e28aYu6iKlTZoeNb4mW-ZuT3UXPtlC_ST7qScZVHmlP_wzrJqQaXBlbDTdj1w7tw69hvw&_nc_ht=scontent.flim6-2.fna&oh=ed3cbf2c77b177de59d3618f909c0962&oe=5C77AE29">
+        <p>Andrea Ybañez</p>
+    <ul>
+            <a href="#"><li>Tabla de Registros</li></a>
+            <a href="#"><li>Informació de Inscritos</li></a>
+            <a href="#"><li>Estadisticas</li></a>
+            <a href="#"><li>Cerrar Sesión</li></a>    
+    </ul>
+
+    </div>
+
+<section>    
+<table>
+<thead>
+<tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Correo Electronico</th>
+    <th>foto</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let employee of employees; let i = index">
+    <td>{{employee.nombre}}</td>
+    <td>{{employee.Apellidos}}</td>
+    <td>{{employee.email}}</td>
+    <td><img src="{{employee.foto}}"></td>
+    <td><mat-icon class="example-icon">edit</mat-icon></td>
+    <td><mat-icon class="example-icon">delete</mat-icon></td>
+    
+</tr>
+</tbody>
+<button mat-raised-button (click)="addEmployee()">Agregar Miembro</button>
+</table>
+
+</section>
+
+</div>
